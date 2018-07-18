@@ -76,7 +76,7 @@ textarea{
     padding: 20px;
     font-family: 'Barlow Semi Condensed', sans-serif;
     font-size: 80px;
-    animation: contact 6s 1;
+    animation: contact 4s 1;
 }
 
 
@@ -125,22 +125,9 @@ input[type=submit]:hover{
             opacity: 1;
             font-size: 40px;
             margin-top: 100px;
-            animation: contact 8s 1;
+            animation: text-pop-up-top 9s 1;
             }
 
-            @keyframes contact{
-                20%{
-                    color: rgb(49, 49, 85);
-                    opacity: 0.8;
-                    margin-bottom: -40px;
-                }
-                30%{
-                    letter-spacing: 65px;
-                    margin-bottom: -40px;
-                }
-                80%{
-                    letter-spacing: 8px;
-                    margin-bottom: -40px;
-                }
-            }
+        
+        
         }
