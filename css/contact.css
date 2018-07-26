@@ -1,7 +1,7 @@
 body{
     font-family: verdana;
     width: 100%;
-    height: auto; 
+    height: 100%; 
     font-size: 16px;
     background: url("../img/starynight.png");
     background-repeat: no-repeat;
@@ -147,6 +147,11 @@ input[type=submit]:hover{
             font-size: 40px;
             margin-top: 100px;
             animation: text-pop-up-top 9s 1;
+            
+            }
+
+            p{
+                font-size: 25px;
             }
 
         
