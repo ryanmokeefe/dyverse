@@ -13,15 +13,11 @@ h1{
     text-align: center;
 }
 
-#particles-js {
+/* #particles-js {
     height: 100%;
-    width: 100%;
-    position: center;
-    background-image: url("../img/starynight.png");
-    background-size: cover;
     background-repeat: no-repeat;
-    /* background-attachment: fixed; */
-  }
+    background-attachment: fixed;
+  } */
  
 /* ------------------------------------------------------------------------------- */
 #number{
@@ -80,6 +76,7 @@ textarea{
 
 #form_content{
     padding: 20px;
+
 }
 
 #contact{
@@ -138,7 +135,7 @@ input[type=submit]:hover{
 
 @media only screen and (max-width: 1024px) {
     body {
-        background-size: 400vh;
+        background-size: 220vh;
         }
 /* 220 */
     }
