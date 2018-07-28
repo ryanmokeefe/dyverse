@@ -9,6 +9,7 @@
 body.design {
   background-image: url("../img/nightsky.png");
   background-repeat: no-repeat;
+  background-size: cover;
   background-attachment: fixed;
   background-position: 25% 13%;
   display: flex;
@@ -113,7 +114,6 @@ body.design {
   align-content: center;
   width: 100%;
   font-family: sans-serif;
-  background-color: rgba(0, 0, 0, 0.8);
   min-height: 100vh;
 }
 .design__content__top h1 {
@@ -134,7 +134,6 @@ body.design {
   width: 100%;
   padding: 2rem 0;
   font-family: sans-serif;
-  background-color: rgba(0, 0, 0, 0.8);
   min-height: 100vh;
 }
 .design__menu-icon {
@@ -284,7 +283,7 @@ body.design {
 
 .slideshow__controls {
   position: absolute;
-  top: 30vh;
+  top: 45%;
   width: 80%;
   display: block;
   flex-flow: row nowrap;

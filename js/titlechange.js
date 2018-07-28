@@ -17,7 +17,7 @@ const iterate = setInterval(() => {
   if (i === titleText.length) {
     clearInterval(iterate);
     title.innerHTML = "Special Inquiries";
-    title.style.fontSize = '30vh';
+    title.style.fontSize = '10rem';
     setTimeout(() => {
         subtitle.classList.add('cta');
       subtitle.innerHTML = "Let's make it happen.";
