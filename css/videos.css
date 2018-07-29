@@ -1,6 +1,14 @@
 
 /* 320px */
 
+.fullScreen {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 body
 {
     box-sizing: border-box;
@@ -17,8 +25,8 @@ body
 {
     width: 100vw;
     height: 50vh;
-    padding: 0;
-    margin: 0;
+    padding: 0 !important;
+    margin: 0 !important;
     box-sizing: border-box;
     overflow: hidden;
 }
@@ -28,7 +36,7 @@ h1, h3
     box-sizing: border-box;
     overflow: hidden;
     width: 100vw;
-    padding: .5em 0 1.25em 1em;
+    padding: .5em 0 1.25em 1em !important;
     text-align: left;
     text-transform: uppercase;
 }
@@ -38,11 +46,16 @@ h1
     position: fixed;
     top: 0;
     height: 2.3em;
-    margin-top: 0 !important;
+    margin: 0 !important;
     text-align: left;
     font-weight: 600 !important;
     font-size: 50px !important;
-    background-color: #111;
+    /* background-color: #111; */
+    background-image: url("../img/nightsky.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 80% 0%;
+    background-size: cover;
 }
 
 h3
@@ -50,8 +63,10 @@ h3
     z-index: 0;
     position: absolute;
     height: 10em !important;
-    margin-top: 10em !important;
+    margin-top: 12em !important;
     margin-left: .75em !important;
+    margin-right: 0 !important;
+    padding-top: 1em !important;
     font-size: 2em !important;
     color: #999;
 }
@@ -79,8 +94,8 @@ h2
     justify-content: space-between;
     position: absolute;
     height: fit-content;
-    width: 100%;
-    margin: 18em 0;
+    width: 100% !important;
+    margin: 0 0 !important;
     padding: 0 0 10em 0;
     background-color: #111;
 }
@@ -256,8 +271,11 @@ h2
     }
     .heading
     {
+        position: relative;
         margin: 100px 0 0;
         padding: 0;
+        height: 50vh;
+
     }
     
     h1
@@ -266,6 +284,7 @@ h2
         padding: 11px 0 20px 0;
         margin: 200px auto !important;
         height: 1.5em;
+        background: none;
         background-color: transparent;
         text-align: center;
     }
@@ -275,6 +294,12 @@ h2
         position: fixed;
         margin-top: 0 !important;
         top: 0;
+        color: #fff;
+        background-image: url("../img/nightsky.png");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: 25% 13%;
+        background-size: cover;
     }
 
     h3
@@ -350,10 +375,14 @@ h2
     }
     .videoBody
     {
+        width: 100% !important;
         align-items: start;
         justify-content: start;
-        margin: 300px 0 0;
+        margin: 25em 0 0 !important;
         padding-top: 3em !important;
+        padding-left: 3em;
+        padding-right: 3em;
+
     }
     .categories
     {
@@ -404,6 +433,33 @@ h2
         border-left: 3.8em solid rgba(255, 255, 255, 1);
     }
 
+    /* // explosion container */
+    .explosion {
+        position: absolute; 
+        width: 600px;
+        height: 600px;
+        pointer-events: none; 
+    }
+    .particle {
+        z-index: -1;
+        position: absolute;   
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        animation: pop 1s reverse forwards; 
+    }
+
+    /* // animation for particle fly away from the cursor */
+    @keyframes pop {
+        from {
+            opacity: 0;
+        }
+        to {
+            top: 50%;
+            left: 50%;
+            opacity: 1;
+        }
+    }
 
 }
     
@@ -412,11 +468,7 @@ h2
 /* Large screens */
 @media only screen  and (min-width : 1920px) 
 {
-    /* .videoBody
-    {
-        margin: 400px auto;
 
-    } */
 
 }
 
@@ -430,7 +482,7 @@ h2
  */
 
 /* @ 750px:
-    video .gutter width: 33%?;
+    fix pos of h3
     nav + top - make smaller
     side menu smaller
 */
