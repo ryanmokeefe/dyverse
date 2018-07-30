@@ -1,20 +1,24 @@
 #particles-js {
+  z-index: -100;
   position: fixed;
   width: 100%;
   height: 100%;
   background: none;
+  opacity: 0.9;
 }
-body.design {
-  background-image: url("https://media.giphy.com/media/3og0IV7MOCfnm85iRa/source.gif");
+body.inquiries {
+  background-image: url("../img/nightsky.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: cover;
+  background-position: 25% 13%;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
-.design__heading {
+.inquiries__heading {
   display: flex;
   flex-flow: row wrap;
   align-content: center;
@@ -22,55 +26,60 @@ body.design {
   font-family: sans-serif;
   margin: 0 0 0 0;
   text-transform: uppercase;
-  height: 100vh;
+  height: 100%;
+  width: 100%;
 }
-design__heading__title {
-  
-}
-.design__heading h1 {
-  order: 1;
-  position: relative;
-  color: rgb(0, 0, 0, 0.9);
+.inquiries__heading h1 {
+  order: 2;
+  position: sticky;
+  color: white;
   font-family: sans-serif;
-  margin: 0 0 0 0;
+  margin: 1rem 0 0 0;
   padding: 0;
   text-transform: uppercase;
-  width: 100%;
+  text-align: center;
   height: auto;
+  width: 100vw;
 }
-.design__heading h4 {
+.inquiries__heading h4 {
+  order: 1;
   position: relative;
-  color: rgb(0, 0, 0, 0.9);
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+  margin: auto;
+  width: 100%;
+  min-height: 14px;
+  height: auto;
+  padding: 0;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.inquiries__heading h4 a {
+  order: 1;
+  text-decoration: none;
+  position: relative;
   font-family: sans-serif;
   text-align: center;
   margin: auto;
   width: 100%;
   height: auto;
-  padding: 0;
   text-transform: uppercase;
-  font-size: 10px;
+  font-size: 14px;
 }
-.design__content {
-  position: relative;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  justify-content: center;
+.cta {
+  opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 2s;
+  padding: 20px;
   color: white;
-  background-color: rgba(0, 0, 0, 0.85);
-  padding: 2%;
-  font-size: 1.2rem;
-  line-height: 2rem;
-  height: 100%;
+  background: rgba(5, 69, 122, 0.808);
+  border-radius: 5%;
+  border: solid rgba(109, 111, 128, 0.842) 1px;
 }
-
-.design__content__top {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  width: 83.5%;
-}
-.design__menu-icon {
+.inquiries__menu-icon {
   position: fixed;
   top: 20px;
   right: 20px;
@@ -81,7 +90,7 @@ design__heading__title {
   cursor: pointer;
 }
 
-.design__menu-icon span {
+.inquiries__menu-icon span {
   width: 100%;
   height: 4px;
   display: block;
@@ -90,7 +99,7 @@ design__heading__title {
   transition: 0.5s;
 }
 
-.design__sidebar {
+.inquiries__sidebar {
   position: fixed;
   top: 0;
   left: -300px;
@@ -103,22 +112,22 @@ design__heading__title {
   box-sizing: border-box;
 }
 
-.design__sidebar.active {
+.inquiries__sidebar.active {
   left: 0;
 }
 
-.design__sidebar .menu {
+.inquiries__sidebar .menu {
   margin: 0;
   padding: 40px 0;
 }
 
-.design__sidebar .menu li {
+.inquiries__sidebar .menu li {
   list-style: none;
   font-family: calibri regular;
   position: relative;
 }
 
-.design__sidebar .menu li a {
+.inquiries__sidebar .menu li a {
   display: block;
   padding: 10px 0;
   text-transform: uppercase;
@@ -127,7 +136,7 @@ design__heading__title {
   text-decoration: none;
 }
 
-.design__sidebar .menu li a::before {
+.inquiries__sidebar .menu li a::before {
   content: "";
   display: block;
   height: 5px;
@@ -138,32 +147,32 @@ design__heading__title {
   width: 0%;
   transition: all ease-in-out 250ms;
 }
-.design__sidebar .menu li a:hover::before {
+.inquiries__sidebar .menu li a:hover::before {
   width: 100%;
 }
 
-.design__menu-icon.active {
+.inquiries__menu-icon.active {
   background: #fc2827;
   color: #fff;
 }
-.design__menu-icon.active span {
+.inquiries__menu-icon.active span {
   position: absolute;
   width: calc(100% - 16px);
   top: calc(50% - 8px);
 }
 
-.design__menu-icon.active span:nth-child(1) {
+.inquiries__menu-icon.active span:nth-child(1) {
   transform: rotate(45deg);
 }
-.design__menu-icon.active span:nth-child(3) {
+.inquiries__menu-icon.active span:nth-child(3) {
   transform: rotate(-45deg);
 }
 
-.design__menu-icon.active span:nth-child(2) {
+.inquiries__menu-icon.active span:nth-child(2) {
   display: none;
 }
 
-.design__social-icon {
+.inquiries__social-icon {
   margin: 0;
   padding: 0;
   position: absolute;
@@ -173,13 +182,13 @@ design__heading__title {
   width: 0 20px;
   box-sizing: border-box;
 }
-.design__social-icon li {
+.inquiries__social-icon li {
   width: 20%;
   text-align: center;
   list-style: none;
 }
 
-.design__social-icon li a {
+.inquiries__social-icon li a {
   display: block;
   font-size: 18px;
   color: #fff;
@@ -191,11 +200,11 @@ design__heading__title {
   transition: 0.5s;
 }
 
-.design__social-icon li a:hover {
+.inquiries__social-icon li a:hover {
   background: #fc2827;
 }
 
-.design__logo2 {
+.inquiries__logo2 {
   width: 100px;
   height: 100px;
 }
@@ -205,8 +214,9 @@ design__heading__title {
 
 /* Slideshow container */
 .slideshow-container {
-  margin: 10rem 0 0 0;
-  height: 25rem;
+  width: 80%;
+  margin: 5rem 0 0 0;
+  height: auto;
 }
 
 /* Hide the images by default */
@@ -214,30 +224,19 @@ design__heading__title {
   display: none;
 }
 
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
+.slideshow__controls {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
 }
 
-/* The dots/bullets/indicators */
-.dot {
+.slideshow__controls :hover {
   cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
 }
 
-.active,
-.dot:hover {
-  background-color: #717171;
+.inquiries__img--carousel {
+  width: 100%;
+  max-height: 20rem;
 }
 
 /* Fading animation */
@@ -265,11 +264,35 @@ design__heading__title {
     opacity: 1;
   }
 }
-
-.sticky {
+.sticking {
   position: fixed;
+  width: 100%;
   top: 0;
   left: 0;
-  width: 100%;
+  z-index: 100;
+}
+
+.sticking h1,
+.sticking h4 {
   color: white;
+}
+
+#prev,
+#next {
+  height: 80px;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }

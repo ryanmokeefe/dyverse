@@ -9,66 +9,33 @@
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
         crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $(".menu-icon").click(function () {
-                $(".menu-icon").toggleClass("active")
-            })
-            $(".menu-icon").click(function () {
-                $(".sidebar").toggleClass("active")
-            })
-        })
-    </script>
 </head>
 
-<body class="design">
-    <div class="design__heading">
-        <div class="design__heading__title" id="sticky-title">
-            <h1>Graphic Design</h1>
-            <h4>Hey now, you're a rockstar.</h4>
+<body class="inquiries">
+    <div class="inquiries__heading">
+        <div class="inquiries__heading__title sticky" id="title1">
+            <h1 id="rotating-title"></h1>
+            <h4><a href="contact.html" id="subtitle"></a></h4>
         </div>
     </div>
-    <div class="design__content">
-        <div class="design__content__top">
-            <div class="slideshow-container">
-                <div class="mySlides fade">
-                    <img src="img/design_spectrym.jpg">
-                </div>
-
-                <div class="mySlides fade">
-                    <img src="img/design_brakefast.jpg">
-                </div>
-
-                <div class="mySlides fade">
-                    <img src="img/design_gym.jpg">
-                </div>
-            </div>
-            <br>
-            <p> We can dance if we want to, we've got all your life and mine As long as we abuse it, never gonna lose it Everything'll
-                work out right I say, we can dance if we want to we can leave your friends behind Cause your friends don't
-                dance and if they don't dance Well they're are no friends of mine I say we can dance, we can dance everything
-                out of control We can dance, we can dance we're doing it wall to wall We can dance, we can dance everybody
-                look at your hands We can dance, we can dance everybody's takin' the chance.
-            </p>
-        </div>
-        <div id="particles-js"></div>
-
     </div>
-    <div class="menu-icon design__menu-icon">
+    <div class="inquiries__content">
+    </div>
+    <div class="menu-icon inquiries__menu-icon">
         <span></span>
         <span></span>
         <span></span>
     </div>
-    <div class="sidebar design__sidebar">
+    <div class="sidebar inquiries__sidebar">
         <a href="#">
-            <img src="img/Logo3.png" class="logo2 design__logo2">
+            <img src="img/Logo3.png" class="logo2 inquiries__logo2">
         </a>
-        <ul class="menu design__menu">
+        <ul class="menu inquiries__menu">
             <li>
-                <a href="#">Home</a>
+                <a href="Productions.html">Home</a>
             </li>
             <li>
-                <a href="#">About</a>
+                <a href="">About</a>
             </li>
             <li>
                 <a href="#">Commercials</a>
@@ -77,13 +44,13 @@
                 <a href="#">Kids Story Books</a>
             </li>
             <li>
-                <a href="#">Designers</a>
+                <a href="design.html">Designers</a>
             </li>
             <li>
-                <a href="#">Contact</a>
+                <a href="contact.html">Contact</a>
             </li>
         </ul>
-        <ul class="social-icon design__social-icon">
+        <ul class="social-icon inquiries__social-icon">
             <li>
                 <a href="#">
                     <i class="fa fa-facebook" aria-hidden="true"></i>
@@ -110,25 +77,19 @@
                 </a>
             </li>
         </ul>
-        <!-- <script src="Script.js"></script> -->
-    </div>
-    <script type="text/javascript" src="js/particles.js"></script>
-    <script type="text/javascript" src="js/app.js"></script>
-    <script type="text/javascript" src="js/carousel.js"></script>
-    <script>
-        window.onscroll = function () { myFunction() };
-
-        var navbar = document.getElementById("sticky-title");
-        var sticky = navbar.offsetTop;
-
-        function myFunction() {
-            if (window.pageYOffset >= sticky) {
-                navbar.classList.add("sticky")
-            } else {
-                navbar.classList.remove("sticky");
-            }
-        }
-    </script>
+        <script type="text/javascript" src="js/carousel.js"></script>
+        <script type="text/javascript" src="js/sticky.js"></script>
+        <script type="text/javascript" src="js/titlechange.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+              $(".menu-icon").click(function () {
+                $(".menu-icon").toggleClass("active")
+              })
+              $(".menu-icon").click(function () {
+                $(".sidebar").toggleClass("active")
+              })
+            })
+          </script>
 </body>
 
 <footer>

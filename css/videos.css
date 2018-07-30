@@ -1,52 +1,87 @@
+
+/* 320px */
+
+.fullScreen {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 body
 {
     box-sizing: border-box;
-    background-color: #222;
-    max-width: 90%;
+    background-image: url("../img/nightsky.png");
     background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 80% 0%;
+    background-size: cover;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100vw;
 }
 .heading
 {
-    height: 15vw;
-    margin: 100px 0 0;
+    width: 100vw;
+    height: 50vh;
+    padding: 0 !important;
+    margin: 0 !important;
     box-sizing: border-box;
     overflow: hidden;
 }
+
 h1, h3
 {
     box-sizing: border-box;
     overflow: hidden;
     width: 100vw;
-    height: 140px;
-    padding: 30px 0 20px 80px;
+    padding: .5em 0 1.25em 1em !important;
     text-align: left;
+    text-transform: uppercase;
 }
 h1
 {
+    z-index: 1;
+    position: fixed;
     top: 0;
-    letter-spacing: 5px;
-    font-family: Verdana, sans-serif;
-    background-color: #111;
-    box-shadow: 3px 3px 10px #444;
+    height: 2.3em;
+    margin: 0 !important;
+    text-align: left;
+    font-weight: 600 !important;
+    font-size: 50px !important;
+    /* background-color: #111; */
+    background-image: url("../img/nightsky.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 80% 0%;
+    background-size: cover;
 }
+
 h3
 {
-    margin: 80px 0 0;
-    color: #888;
-    font-family: Palatino;
-    font-style: italic;
+    z-index: 0;
+    position: absolute;
+    height: 10em !important;
+    margin-top: 12em !important;
+    margin-left: .75em !important;
+    margin-right: 0 !important;
+    padding-top: 1em !important;
+    font-size: 2em !important;
+    color: #999;
 }
-#particles-js 
+.browseDiv 
 {
-    background-image: none;
-    margin: 0 auto;
-    width: 100vw;
+    display: none;
+}
+h2
+{
+    padding-left: 1.7em;
 }
 .flex 
 {
     display: flex;
-    flex-flow: row wrap;
-        /* border: 2px solid white; */
+    flex-flow: column;
     align-items: center;
     justify-content: center;
     padding: 0;
@@ -54,62 +89,28 @@ h3
 }
 .videoBody
 {
-    position: absolute;
-    height: 100%;
-    max-width: 80%;
-    margin: 100px auto;
-    padding: 0 0 0 60px;
-}
-.video 
-{
-    display: flex;
-    justify-content: center;
+        
     align-items: center;
-    cursor: pointer;
-    max-width: 90%;
-}
-.gutter
-{
+    justify-content: space-between;
+    position: absolute;
     height: fit-content;
-    max-width: 33%;
-    margin: 0;
-    padding: 0 0 20px 0;
-}
-.gutter-header
-{
-    width: 100%;
-    top: 0;
-    margin: 0 0 10px 0;
-}
-.gutter h2, .gutter p
-{
-    padding: 5px 25px;
-    text-align: left;
-    color: #fff;
-    letter-spacing: 1px;
-}
-.gutter p
-{
-    color: #888;
-    font-family: Palatino;
-    font-style: italic;
-
-}
-.gutter:hover 
-{
-    box-shadow: 1px 1px 7px rgba(255, 255, 255, .5);
-}
-.gutter:hover .gutter-header
-{
+    width: 100% !important;
+    margin: 0 0 !important;
+    padding: 0 0 10em 0;
     background-color: #111;
 }
-.gutter:hover video
+.categories
 {
-    max-width: 100%;
-
+    width: 100%;
+    margin: 1em 0 0;
+    font-size: 2em;
+    font-weight: 500;
+    color: #888;
 }
+
 #popout
 {
+    z-index: 3;
     display: none;
     align-items: center;
     justify-content: center;
@@ -119,7 +120,6 @@ h3
     margin: 0;
     padding: 0;
 }
-
 .exit-popout
 {
     display: flex;
@@ -134,7 +134,6 @@ h3
     color: #fff;
     cursor: pointer;
 }
-
 .exit-popout span {
     height: 4px;
     display: block;
@@ -144,16 +143,354 @@ h3
     position: absolute;
     width: calc(100% - 16px);
     top: calc(50% - 8px);
-  }
-  
-  .exit-popout span:nth-child(1) {
+}
+.exit-popout span:nth-child(1) {
     transform: rotate(45deg);
-  }
-  .exit-popout span:nth-child(3) {
+}
+.exit-popout span:nth-child(3) {
     transform: rotate(-45deg);
-  }
-  
-  .exit-popout span:nth-child(2) {
-    display: none;
-  }
+}
 
+.exit-popout span:nth-child(2) {
+    display: none;
+}
+
+.video
+{
+    box-sizing: border-box;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.carousel
+{
+    height: 200px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.previousButton, .nextButton
+{
+    position: absolute;
+    z-index: 5;
+    top: 25px;
+    height: 0;
+    width: 0;
+    margin-top: 0 !important; 
+    border-top: 5em solid transparent;
+    border-bottom: 5em solid transparent;
+}
+.previousButton
+{
+    margin-left: 2em;
+    left: 0;
+    border-right: 4em solid rgba(255, 255, 255, .7);
+}
+.previousButton:hover
+{
+    border-right: 4em solid rgba(255, 255, 255, 1);
+}
+.nextButton
+{
+    margin-right: 2em;
+    right: 0;
+    border-left: 4em solid rgba(245, 255, 255, .7);
+}
+.nextButton:hover
+{
+    border-left: 4em solid rgba(255, 255, 255, 1);
+}
+
+/*  */
+
+.menu-icon, .sidebar 
+{
+    z-index: 3;
+}
+.menu-icon
+{
+    top: 2.5em;
+    right: 2.5em;
+    width: 6.25em;
+    height: 5.5em;
+    background-color: #444;
+}
+.menu-icon span {
+    height: .5em;
+    margin: 1em 0;
+}
+.sidebar {
+    left: -40em;
+    width: 40em;
+    padding: 2.5em;
+}
+.sidebar.active
+{
+    background-color: #555;
+}
+.sidebar .menu {
+    padding: 5em 0;
+}
+.sidebar .menu li a {
+    padding: 1em 0;
+    font-size: 3em;
+}
+.menu-icon.active span {
+    width: calc(100% - 1em);
+    top: calc(50% - 1em);
+}
+.social-icon {
+    bottom: 5em;
+    width: 0 2.5em;
+}
+.social-icon li a {
+    font-size: 4em;
+    width: 2em;
+    height: 2em;
+    line-height: 2.25em;
+}
+.logo2 
+{
+    width: 12.5em;
+    height: 12.5em;
+}
+
+
+
+
+
+
+/* Desktop 1080px: */
+@media only screen  and (min-width : 1080px) 
+{
+    body
+    {
+        max-width: 90%;
+        background-position: 25% 13%;
+
+    }
+    .heading
+    {
+        position: relative;
+        margin: 100px 0 0;
+        padding: 0;
+        height: 50vh;
+
+    }
+    
+    h1
+    {
+        position: absolute;
+        padding: 11px 0 20px 0;
+        margin: 200px auto !important;
+        height: 1.5em;
+        background: none;
+        background-color: transparent;
+        text-align: center;
+    }
+
+    .h1-bgcolor
+    {
+        position: fixed;
+        margin-top: 0 !important;
+        top: 0;
+        color: #fff;
+        background-image: url("../img/nightsky.png");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: 25% 13%;
+        background-size: cover;
+    }
+
+    h3
+    {
+        height: 240px;
+        margin: 300px 0 !important;
+        padding: 50px 0 20px !important;
+        font-size: 1.15em !important;
+        font-weight: 600 !important;
+        text-align: center;
+    }
+
+    h2
+    {
+        position: relative;
+        margin: 20px 0 0 140px !important;
+    }
+
+    .menu-icon {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        width: 66px !important;
+        height: 52px !important;
+        padding: 4px 8px;
+        background: #555;
+        cursor: pointer;
+    }
+    
+    .menu-icon span {
+        width: 100%;
+        height: 4px;
+        display: block;
+        background: #fff;
+        margin: 6px 0;
+        transition: 0.5s;
+    }
+      
+    .sidebar {
+        left: -18.75em;
+        width: 18.75em;
+        padding: 1.25em;
+    }
+    .sidebar .menu {
+        padding: 2.5em 0;
+    }
+    .sidebar .menu li a {
+        padding: .625em 0;
+        font-size: 1.125em;
+    }
+    .menu-icon.active span {
+        width: calc(100% - 1em);
+        top: calc(50% - .5em);
+    }
+    .social-icon {
+        bottom: 2.5em;
+        width: 0 1.25em;
+    }
+    .social-icon li a {
+        font-size: 1.125em;
+        width: 2.5em;
+        height: 2.5em;
+        line-height: 2.5em;
+    }
+    .logo2 {
+        width: 6.25em;
+        height: 6.25em;
+    }
+    .flex 
+    {
+        display: flex;
+        flex-flow: row wrap;
+    }
+    .videoBody
+    {
+        width: 100% !important;
+        align-items: start;
+        justify-content: start;
+        margin: 25em 0 0 !important;
+        padding-top: 3em !important;
+        padding-left: 3em;
+        padding-right: 3em;
+
+    }
+    .categories
+    {
+        font-size: 2em;
+        margin: 2em .5em 1em;
+    }
+    
+    .video
+    {
+        width: auto;
+        margin: 0 auto;
+        padding: 0;
+    }
+    .video:hover
+    {
+        cursor: pointer;
+        height: 200px;
+    }
+    .carousel
+    {
+        height: 200px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+        
+    .previousButton, .nextButton
+    {
+        margin-top: 1.25em !important; 
+        border-top: 3.75em solid transparent;
+        border-bottom: 3.75em solid transparent;
+    }
+    .previousButton
+    {
+        border-right: 3.75em solid rgba(255, 255, 255, .7);
+    }
+    .previousButton:hover
+    {
+        cursor: pointer;
+        border-right: 3.8em solid rgba(255, 255, 255, 1);
+    }
+    .nextButton
+    {
+        border-left: 3.75em solid rgba(255, 255, 255, .7);
+    }
+    .nextButton:hover
+    {
+        cursor: pointer;
+        border-left: 3.8em solid rgba(255, 255, 255, 1);
+    }
+
+    /* // explosion container */
+    .explosion {
+        position: absolute; 
+        width: 600px;
+        height: 600px;
+        pointer-events: none; 
+    }
+    .particle {
+        z-index: -1;
+        position: absolute;   
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        animation: pop 1s reverse forwards; 
+    }
+
+    /* // animation for particle fly away from the cursor */
+    @keyframes pop {
+        from {
+            opacity: 0;
+        }
+        to {
+            top: 50%;
+            left: 50%;
+            opacity: 1;
+        }
+    }
+
+}
+    
+
+
+/* Large screens */
+@media only screen  and (min-width : 1920px) 
+{
+
+
+}
+
+/* Use orientation to remove fixed pos reel from landscape mode phones; when category is clicked, just navigate up to #filmReel */
+
+
+/* @ 600px:
+    video .gutter width: 50%;
+    h3 font smaller;
+    .gutter p font larger;
+ */
+
+/* @ 750px:
+    fix pos of h3
+    nav + top - make smaller
+    side menu smaller
+*/
+
+/* On Tablet aspect ratio:
+    check side menu sizing after previous media queries
+*/
+
+/* 
+    adjust for landscape
+*/

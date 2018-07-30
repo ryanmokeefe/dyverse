@@ -9,83 +9,83 @@
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
         crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $(".menu-icon").click(function () {
-                $(".menu-icon").toggleClass("active")
-            })
-            $(".menu-icon").click(function () {
-                $(".sidebar").toggleClass("active")
-            })
-        })
-    </script>
 </head>
 
 <body class="design">
     <div class="design__heading">
-        <div class="design__heading__title" id="title1">
+        <div class="design__heading__title sticky" id="title1">
             <h1>Graphic Design</h1>
             <h4>Hey now, you're a rockstar.</h4>
         </div>
     </div>
     </div>
     <div class="design__content">
-        <div class="design__content__top" id="top">
+        <div class="design__content__top sticky">
             <div class="slideshow-container">
                 <div class="mySlides fade">
-                    <img class="design__img--carousel" src="img/design_spectrym.jpg">
+                    <img class="design__img--carousel" src="img/design/spectrym.jpg">
                 </div>
 
                 <div class="mySlides fade">
-                    <img class="design__img--carousel" src="img/design_brakefast.jpg">
+                    <img class="design__img--carousel" src="img/design/gym.jpg">
                 </div>
 
                 <div class="mySlides fade">
-                    <img class="design__img--carousel" src="img/design_gym.jpg">
+                    <img class="design__img--carousel" src="img/design/salad.jpg">
+                </div>
+                <div class="mySlides fade">
+                    <img class="design__img--carousel" src="img/design/ph7.jpg">
+                </div>
+
+                <div class="mySlides fade">
+                    <img class="design__img--carousel" src="img/design/brakefast.jpg">
+                </div>
+
+                <div class="mySlides fade">
+                    <img class="design__img--carousel" src="img/design/rayn.jpg">
+                </div>
+                <div class="slideshow__controls">
+                        <img id="prev" src="img/design/previous.png">
+                        <img id="next" src="img/design/next.png">
                 </div>
             </div>
             <p> Dyverse productions teams up with local designers to bring you the best graphic design services for your business,
                 product, organization, or promotion. We are as customer and quality-focused with our design services as you
                 have come to expect from us in all other aspects of our company.
                 <br>
-                <br> Dyverse productions teams up with local designers to bring you the best graphic design services for your
-                business, product, organization, or promotion. We are as customer and quality-focused with our design services
-                as you have come to expect from us in all other aspects of our company.
-                <br>
-                <br> Dyverse productions teams up with local designers to bring you the best graphic design services for your
-                business, product, organization, or promotion. We are as customer and quality-focused with our design services
-                as you have come to expect from us in all other aspects of our company.
+                <br> 
+                Contact us to find out more about how we can make your brand pop.
             </p>
         </div>
-        <div class="design__content__spacer">
+        <!-- <div class="design__content__spacer">
             <div id="title2">
                 <h1>Good Design</h1>
                 <h4>is design that only surprises you when it wants to.</h4>
             </div>
-        </div>
-        <div class="design__content__center">
-            <div class="design__img--sticky">
+        </div> -->
+        <!-- <div class="design__content__center">
+            <div class="design__img--sticky sticky">
                 <img src="img/design_brakefast.jpg">
             </div>
-            <div class="design__img--sticky">
+            <div class="design__img--sticky sticky">
                 <img src="img/design_canine.jpg">
             </div>
-            <div class="design__img--sticky">
+            <div class="design__img--sticky sticky">
                 <img src="img/design_gym.jpg">
             </div>
-            <div class="design__img--sticky">
+            <div class="design__img--sticky sticky">
                 <img src="img/design_ph7.jpg">
             </div>
-            <div class="design__img--sticky">
+            <div class="design__img--sticky sticky">
                 <img src="img/design_rayn.jpg">
             </div>
-            <div class="design__img--sticky">
+            <div class="design__img--sticky sticky">
                 <img src="img/design_salad.jpg">
             </div>
-            <div class="design__img--sticky">
+            <div class="design__img--sticky sticky">
                 <img src="img/design_spectrym.jpg">
             </div>
-        </div>
+        </div> -->
         <!-- <div id="particles-js"></div> -->
 
     </div>
@@ -147,23 +147,16 @@
         </ul>
         <script type="text/javascript" src="js/carousel.js"></script>
         <script type="text/javascript" src="js/sticky.js"></script>
-        <!-- <script type="text/javascript" src="js/particles.js"></script>
-        <script type="text/javascript" src="js/app.js"></script> -->
-        <!-- <script src="Script.js"></script> -->
-        <!-- <script>
-            window.onscroll = function () { myFunction() };
-
-            var navbar = document.getElementById("sticky-title");
-            var sticky = navbar.offsetTop;
-
-            function myFunction() {
-                if (window.pageYOffset >= sticky - 25) {
-                    navbar.classList.add("sticky")
-                } else {
-                    navbar.classList.remove("sticky");
-                }
-            }
-        </script> -->
+        <script type="text/javascript">
+            $(document).ready(function () {
+              $(".menu-icon").click(function () {
+                $(".menu-icon").toggleClass("active")
+              })
+              $(".menu-icon").click(function () {
+                $(".sidebar").toggleClass("active")
+              })
+            })
+          </script>
 </body>
 
 <footer>
