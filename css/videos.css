@@ -12,7 +12,7 @@
 body
 {
     box-sizing: border-box;
-    background-image: url("../img/nightsky.png");
+    background-image: url("../img/starynight.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: 80% 0%;
@@ -23,10 +23,8 @@ body
 }
 .heading
 {
-    width: 100vw;
-    height: 50vh;
-    padding: 0 !important;
-    margin: 0 !important;
+    width: 100%;
+    height: 100vh;
     box-sizing: border-box;
     overflow: hidden;
 }
@@ -36,7 +34,6 @@ h1, h3
     box-sizing: border-box;
     overflow: hidden;
     width: 100vw;
-    padding: .5em 0 1.25em 1em !important;
     text-align: left;
     text-transform: uppercase;
 }
@@ -51,7 +48,7 @@ h1
     font-weight: 600 !important;
     font-size: 50px !important;
     /* background-color: #111; */
-    background-image: url("../img/nightsky.png");
+    background-image: url("../img/starynight.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: 80% 0%;
@@ -295,7 +292,7 @@ h2
         margin-top: 0 !important;
         top: 0;
         color: #fff;
-        background-image: url("../img/nightsky.png");
+        background-image: url("../img/starynight.png");
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-position: 25% 13%;

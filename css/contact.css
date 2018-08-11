@@ -3,13 +3,9 @@ body{
     width: 100%;
     height: 1000px; 
     font-size: 16px;
-<<<<<<< HEAD
     background: url("../img/starynight.png");
-=======
-    background: url("../img/earth.jpg");
     width: 100%;
     height: auto;
->>>>>>> 1da135a3f5ba7f3e69df783132c1e9c1ac4080a8
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
