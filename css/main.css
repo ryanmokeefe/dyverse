@@ -93,7 +93,11 @@ h4 {
   text-decoration: none;
 }
 
-.sidebar .menu li a::before {
+.sidebar .menu li a:hover {
+  background: gray;
+}
+
+/* .sidebar .menu li a::before {
   content: "";
   display: block;
   height: 5px;
@@ -106,7 +110,7 @@ h4 {
 }
 .sidebar .menu li a:hover::before {
   width: 100%;
-}
+} */
 
 .menu-icon.active {
   background: #fc2827;
