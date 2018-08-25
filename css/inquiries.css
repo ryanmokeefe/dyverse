@@ -296,3 +296,62 @@ body.inquiries {
 		opacity: 1;
 	}
 }
+
+
+/* Mobile Menu: */
+@media only screen  and (max-width : 1000px) 
+{
+
+  .menu-icon, .sidebar 
+  {
+      z-index: 3;
+  }
+  .menu-icon
+  {
+      top: 2.5em;
+      right: 2.5em;
+      width: 6.25em;
+      height: 5.5em;
+      background-color: #444;
+  }
+  .menu-icon span {
+      height: .5em;
+      margin: 1em 0;
+  }
+  .sidebar {
+      left: -40em;
+      width: 40em;
+      padding: 2.5em;
+  }
+  .sidebar.active
+  {
+      background-color: #555;
+  }
+  .sidebar .menu {
+      padding: 5em 0;
+  }
+  .sidebar .menu li a {
+      padding: 1em 0;
+      font-size: 3em;
+  }
+  .menu-icon.active span {
+      width: calc(100% - 1em);
+      top: calc(50% - 1em);
+  }
+  .social-icon {
+      bottom: 5em;
+      width: 0 2.5em;
+  }
+  .social-icon li a {
+      font-size: 4em;
+      width: 2em;
+      height: 2em;
+      line-height: 2.25em;
+  }
+  .logo2 
+  {
+      width: 12.5em;
+      height: 12.5em;
+  }
+
+}

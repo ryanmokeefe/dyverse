@@ -47,7 +47,6 @@ h1
     text-align: left;
     font-weight: 600 !important;
     font-size: 50px !important;
-    /* background-color: #111; */
     background-image: url("../img/starynight.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -94,7 +93,6 @@ h2
     width: 100% !important;
     margin: 0 0 !important;
     padding: 0 0 10em 0;
-    background-color: #111;
 }
 .categories
 {
@@ -312,7 +310,7 @@ h2
     h2
     {
         position: relative;
-        margin: 20px 0 0 140px !important;
+        margin: 20px 0 20px 140px !important;
     }
 
     .menu-icon {
@@ -375,7 +373,7 @@ h2
         width: 100% !important;
         align-items: start;
         justify-content: start;
-        margin: 25em 0 0 !important;
+        margin: 5em 0 0 !important;
         padding-top: 3em !important;
         padding-left: 3em;
         padding-right: 3em;
@@ -430,33 +428,6 @@ h2
         border-left: 3.8em solid rgba(255, 255, 255, 1);
     }
 
-    /* // explosion container */
-    .explosion {
-        position: absolute; 
-        width: 600px;
-        height: 600px;
-        pointer-events: none; 
-    }
-    .particle {
-        z-index: -1;
-        position: absolute;   
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        animation: pop 1s reverse forwards; 
-    }
-
-    /* // animation for particle fly away from the cursor */
-    @keyframes pop {
-        from {
-            opacity: 0;
-        }
-        to {
-            top: 50%;
-            left: 50%;
-            opacity: 1;
-        }
-    }
 
 }
     
