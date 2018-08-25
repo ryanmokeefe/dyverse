@@ -141,7 +141,7 @@ body.inquiries {
   display: block;
   height: 5px;
   width: 100%;
-  background-color: #ff0000;
+  /* background-color: #ff0000; */
   position: absolute;
   bottom: 0;
   width: 0%;
